@@ -1,0 +1,58 @@
+version: '3'
+services:
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    env_file:
+      - ./docker.env
+    ports:
+      - "6000:27017"
+    volumes:
+      - mongodb:/data/db
+    networks:
+      - mynet
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    volumes:
+      - redisDB:/data
+    networks:
+      - mynet
+    ports:
+      - '6300:6379'
+    # expose:
+    #   - 6379
+
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    networks:
+      - mynet
+    volumes:
+      - pgDB:/data/pgDB
+    env_file:
+      - ./docker.env
+
+  # users:
+  #   build: ./users
+  #   ports:
+  #     - "8000:8000"
+  #   depends_on:
+  #     - mongodb
+  #     - redis
+  #   networks:
+  #     - mynet
+  #   command: ["./wait-for-it.sh", "mongodb:27017", "--", "./wait-for-it.sh", "redis:6379", "--", "./users"]
+
+volumes:
+  mongodb:
+  redisDB:
+  pgDB:
+
+networks:
+  mynet:
+    driver: bridge

@@ -1,0 +1,7 @@
+2023/12/03 17:20:13 [2023-12-03 17:20:13] [ERROR] [pinging redis client] dial tcp 127.0.0.1:6379: connect: connection refused
+2023/12/11 07:25:41 [2023-12-11 07:25:41] [ERROR] [pinging mongo db client] server selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: mongodb:27017, Type: Unknown, Last error: dial tcp: lookup mongodb on 127.0.0.53:53: server misbehaving }, ] }
+2023/12/11 07:29:35 [2023-12-11 07:29:35] [ERROR] [pinging mongo db client] server selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: mongodb:27017, Type: Unknown, Last error: dial tcp: lookup mongodb on 127.0.0.53:53: server misbehaving }, ] }
+2023/12/11 07:30:14 [2023-12-11 07:30:14] [ERROR] [pinging mongo db client] server selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: mongodb:6000, Type: Unknown, Last error: dial tcp: lookup mongodb on 127.0.0.53:53: server misbehaving }, ] }
+2023/12/11 07:32:13 [2023-12-11 07:32:13] [ERROR] [pinging mongo db client] server selection error: server selection timeout, current topology: { Type: Unknown, Servers: [{ Addr: mongodb:6000, Type: Unknown, Last error: dial tcp: lookup mongodb on 127.0.0.53:53: server misbehaving }, ] }
+2023/12/11 07:37:05 [2023-12-11 07:37:05] [ERROR] [while signing in a user] mongo: no documents in result
+2023/12/11 07:50:54 [2023-12-11 07:50:54] [ERROR] [while signing up new user] user with that email already exist
